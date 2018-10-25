@@ -1,14 +1,12 @@
-package edu.arquitecturas.web.cacic2018.db.mysql.impl;
+package edu.arquitecturas.web.cacic18.db.mysql.impl;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
-import edu.arquitecturas.web.cacic2018.db.MysqlDao;
-import edu.arquitecturas.web.cacic2018.db.UsuarioDao;
-import edu.arquitecturas.web.cacic2018.entity.Usuario;
+import edu.arquitecturas.web.cacic18.db.MysqlDao;
+import edu.arquitecturas.web.cacic18.db.UsuarioDao;
+import edu.arquitecturas.web.cacic18.entity.Usuario;
 
 public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 	
@@ -29,6 +27,7 @@ public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 			eManager.close();
 		}
 	}
+	
 	public Usuario getUsuario(Integer id) {
 		Usuario usuario = null;
 		EntityManager eManager=null;
@@ -44,6 +43,7 @@ public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 		}
 		return usuario;
 	}
+	
 	public List<Usuario> getUsuarios() {
 		List<Usuario> usuarios = null;
 		EntityManager eManager= null;
@@ -60,6 +60,7 @@ public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 		}
 		return usuarios;
 	}
+	
 	public void bajaUsuario(Integer id) {
 		EntityManager eManager=null;
 		try{
@@ -76,4 +77,5 @@ public class UsuarioMysqlDAOImpl extends MysqlDao implements UsuarioDao{
 			eManager.close();
 		}
 	}
+	
 }

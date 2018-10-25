@@ -1,7 +1,6 @@
-package edu.arquitecturas.web.cacic2018.entity;
+package edu.arquitecturas.web.cacic18.entity;
 
 import java.util.Date;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -52,31 +51,41 @@ public class Revision {
 	public Integer getIdRevision() {
 		return idRevision;
 	}
+	
 	public void setIdRevision(Integer idRevision) {
 		this.idRevision = idRevision;
 	}
+	
 	public String getEstado() {
 		return estado;
 	}
+	
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
 	public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
+	
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
+	
 	public Usuario getEvaluador() {
 		return evaluador;
 	}
+	
 	public void setEvaluador(Usuario evaluador) {
 		this.evaluador = evaluador;
 	}
+	
 	public Trabajo getTrabajo() {
 		return trabajo;
 	}
+	
 	public void setTrabajo(Trabajo trabajo) {
 		this.trabajo = trabajo;
 	}
+	
 }

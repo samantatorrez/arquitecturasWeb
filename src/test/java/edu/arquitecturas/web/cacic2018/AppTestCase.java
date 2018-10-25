@@ -2,9 +2,9 @@ package edu.arquitecturas.web.cacic2018;
 
 import org.junit.Test;
 
-import edu.arquitecturas.web.cacic2018.db.DAOFactory;
-import edu.arquitecturas.web.cacic2018.db.UsuarioDao;
-import edu.arquitecturas.web.cacic2018.entity.Usuario;
+import edu.arquitecturas.web.cacic18.db.DAOFactory;
+import edu.arquitecturas.web.cacic18.db.UsuarioDao;
+import edu.arquitecturas.web.cacic18.entity.Usuario;
 import junit.framework.TestCase;
 
 public class AppTestCase extends TestCase {

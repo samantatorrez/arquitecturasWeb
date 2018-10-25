@@ -1,12 +1,12 @@
-package edu.arquitecturas.web.cacic2018.db.mysql.impl;
+package edu.arquitecturas.web.cacic18.db.mysql.impl;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import edu.arquitecturas.web.cacic2018.db.MysqlDao;
-import edu.arquitecturas.web.cacic2018.db.TrabajoDao;
-import edu.arquitecturas.web.cacic2018.entity.Trabajo;
+import edu.arquitecturas.web.cacic18.db.MysqlDao;
+import edu.arquitecturas.web.cacic18.db.TrabajoDao;
+import edu.arquitecturas.web.cacic18.entity.Trabajo;
 
 public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 	
@@ -27,9 +27,10 @@ public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 			eManager.close();
 		}
 	}
+	
 	public Trabajo getTrabajo(Integer id) {
 		Trabajo trabajo = null;
-		EntityManager eManager=null;
+		EntityManager eManager = null;
 		try{
 			eManager = getEntityManager();
 			trabajo = eManager.find(Trabajo.class, id);
@@ -42,12 +43,13 @@ public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 		}
 		return trabajo;
 	}
+	
 	public List<Trabajo> getTrabajos() {
 		List<Trabajo> trabajos = null;
-		EntityManager eManager= null;
+		EntityManager eManager = null;
 		try{
 			eManager = getEntityManager();
-			trabajos  = eManager.createQuery(
+			trabajos = eManager.createQuery(
 			         "Select a From Employee a", Trabajo.class).getResultList();
 			return trabajos;
 		} catch (Exception e) {
@@ -58,8 +60,9 @@ public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 		}
 		return trabajos;
 	}
+	
 	public void bajaTrabajo(Integer id) {
-		EntityManager eManager=null;
+		EntityManager eManager = null;
 		try{
 			eManager = getEntityManager();
 			eManager.getTransaction().begin();
@@ -74,4 +77,5 @@ public class TrabajoMysqlDAOImpl extends MysqlDao implements TrabajoDao{
 			eManager.close();
 		}
 	}
+	
 }

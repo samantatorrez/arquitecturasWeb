@@ -1,4 +1,4 @@
-package edu.arquitecturas.web.cacic2018.entity;
+package edu.arquitecturas.web.cacic18.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,7 +92,8 @@ public class Trabajo {
 		this.revisiones = revisiones;
 	}
 	
-	public void addRevisiones(Revision revision) {
+	public void addRevision(Revision revision) {
 		this.revisiones.add(revision);
 	}
+	
 }

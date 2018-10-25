@@ -1,4 +1,4 @@
-package edu.arquitecturas.web.cacic2018.entity;
+package edu.arquitecturas.web.cacic18.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +16,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.jasypt.util.password.ConfigurablePasswordEncryptor;
-import org.jasypt.util.password.StrongPasswordEncryptor;
 
 @Entity
 @Table(name="Usuario")
@@ -83,72 +82,94 @@ public class Usuario {
 		this.revisiones = revisiones;
 		this.trabajos = trabajos;
 	}
+	
 	public Integer getIdUsuario() {
 		return idUsuario;
 	}
+	
 	public void setIdUsuario(Integer idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 	public String getApellido() {
 		return apellido;
 	}
+	
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	
 	public String getRol() {
 		return rol;
 	}
+	
 	public void setRol(String rol) {
 		this.rol = rol;
 	}
+	
 	public String getLugarTrabajo() {
 		return lugarTrabajo;
 	}
+	
 	public void setLugarTrabajo(String lugarTrabajo) {
 		this.lugarTrabajo = lugarTrabajo;
 	}
+	
 	public String getNombreUsuario() {
 		return nombreUsuario;
 	}
+	
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
+	
 	public String getContrasenia() {
 		return this.contrasenia;
 	}
+	
 	public void setContrasenia(String contrasenia) {
 		ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor ();
 		passwordEncryptor.setAlgorithm("SHA-1");
 		passwordEncryptor.setPlainDigest(true);
 		this.contrasenia = passwordEncryptor.encryptPassword(contrasenia);
 	}
+	
 	public String getTemas() {
 		return temas;
 	}
+	
 	public void setTemas(String temas) {
 		this.temas = temas;
 	}
+	
 	public Date getFechaNac() {
 		return fechaNac;
 	}
+	
 	public void setFechaNac(Date fechaNac) {
 		this.fechaNac = fechaNac;
 	}
+	
 	public String getDomicilio() {
 		return domicilio;
 	}
+	
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
+	
 	public int getCodPostal() {
 		return codPostal;
 	}
+	
 	public void setCodPostal(int codPostal) {
 		this.codPostal = codPostal;
 	}
@@ -156,19 +177,24 @@ public class Usuario {
 	public List<Revision> getRevisiones() {
 		return revisiones;
 	}
+	
 	public void setRevisiones(List<Revision> revisiones) {
 		this.revisiones = revisiones;
 	}
-	public void addRevisiones(Revision revision) {
+	
+	public void addRevision(Revision revision) {
 		this.revisiones.add(revision);
 	}
+	
 	public List<Trabajo> getTrabajos() {
 		return trabajos;
 	}
+	
 	public void setTrabajos(List<Trabajo> trabajos) {
 		this.trabajos = trabajos;
 	}
-	public void addTrabajos(Trabajo trabajo) {
+	
+	public void addTrabajo(Trabajo trabajo) {
 		this.trabajos.add(trabajo);
 	}
 	

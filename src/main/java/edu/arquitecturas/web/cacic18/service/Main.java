@@ -1,7 +1,7 @@
-package edu.arquitecturas.web.cacic2018.service;
+package edu.arquitecturas.web.cacic18.service;
 
-import edu.arquitecturas.web.cacic2018.db.DAOFactory;
-import edu.arquitecturas.web.cacic2018.db.UsuarioDao;
+import edu.arquitecturas.web.cacic18.db.DAOFactory;
+import edu.arquitecturas.web.cacic18.db.UsuarioDao;
 
 public class Main {
 
